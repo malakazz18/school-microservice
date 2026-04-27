@@ -6,20 +6,6 @@ Conception et développement d'un **microservice REST** en utilisant **Spring Bo
 
 ##  Membres du groupe : Azzouz Malek G1 et Lahbib Malek G2 equipe 11 
 
-## 🛠️ Technologies utilisées
-
-| Technologie | Version |
-|-------------|---------|
-| Java | 21 |
-| Spring Boot | 4.0.6 |
-| Spring Data JPA | — |
-| Spring Data REST | — |
-| PostgreSQL | — |
-| Lombok | — |
-| Maven | — |
-
----
-
 ##  Structure du projet
 
 ```
