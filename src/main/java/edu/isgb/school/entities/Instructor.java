@@ -1,12 +1,19 @@
 package edu.isgb.school.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "t_instructor")
+
 public class Instructor {
 
     @Id
@@ -20,21 +27,17 @@ public class Instructor {
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
     @JoinTable(
-            name = "Instructor_Course",
-            joinColumns = @JoinColumn(name = "instructors_pk_Instructor"),
-            inverseJoinColumns = @JoinColumn(name = "courses_pk_course")
+            name = "instructor_course",
+            joinColumns = @JoinColumn(name = "idInstructor"),
+            inverseJoinColumns = @JoinColumn(name = "idCourse")
     )
     private List<Course> courses = new ArrayList<>();
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "school_PK_school")
+
     private School school;
 
-    public Instructor() {}
 
-    public Instructor(String name) {
-        this.name = name;
-    }
 
 
     public void addCourse(Course course) {
@@ -42,15 +45,5 @@ public class Instructor {
         course.getInstructors().add(this);
     }
 
-    public Integer getIdInstructor() { return idInstructor; }
-    public void setIdInstructor(Integer idInstructor) { this.idInstructor = idInstructor; }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public List<Course> getCourses() { return courses; }
-    public void setCourses(List<Course> courses) { this.courses = courses; }
-
-    public School getSchool() { return school; }
-    public void setSchool(School school) { this.school = school; }
 }

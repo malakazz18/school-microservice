@@ -2,7 +2,15 @@ package edu.isgb.school.entities;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 
 public class Department {
@@ -16,21 +24,7 @@ public class Department {
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-
     private School school;
 
-    public Department() {}
 
-    public Department(String name) {
-        this.name = name;
-    }
-
-    public Integer getIdDepartment() { return idDepartment; }
-    public void setIdDepartment(Integer idDepartment) { this.idDepartment = idDepartment; }
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public School getSchool() { return school; }
-    public void setSchool(School school) { this.school = school; }
 }
