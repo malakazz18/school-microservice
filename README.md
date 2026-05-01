@@ -142,7 +142,7 @@ Les endpoints ont été testés avec **Postman**.
   }
 }
 
-<img width="1072" height="928" alt="image" src="https://github.com/user-attachments/assets/cbb745e0-a5d9-4f86-a0ea-0b7c36ccf8f6" />
+
 
 ```
 
@@ -159,6 +159,9 @@ Les endpoints ont été testés avec **Postman**.
   ]
 }
 ```
+<img width="1048" height="842" alt="image" src="https://github.com/user-attachments/assets/4651c09c-5782-46ed-9f6e-867318edd71e" />
+
+<img width="1060" height="932" alt="image" src="https://github.com/user-attachments/assets/fc1adf83-e1c6-4cff-a3a6-ff2981e3c76b" />
 
 ---
 
