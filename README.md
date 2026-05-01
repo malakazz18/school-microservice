@@ -173,5 +173,3 @@ Controller  →  Service  →  Repository  →  Base de données
 ```
 
 
-Le compte rendu du projet est disponible dans ce fichier :
-
