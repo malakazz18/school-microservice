@@ -29,7 +29,7 @@ school-microservice/
 │       │       │   └── DepartmentRepository.java
 │       │       ├── services/          # Logique métier
 │       │       │   └── SchoolService.java
-│       │       └── test/              # Contrôleur REST
+│       │       └── Controller/              # Contrôleur REST
 │       │           └── TestSchoolController.java
 │       └── resources/
 │           └── application.properties
@@ -141,6 +141,9 @@ Les endpoints ont été testés avec **Postman**.
     "postalCode": "7000"
   }
 }
+
+<img width="1072" height="928" alt="image" src="https://github.com/user-attachments/assets/cbb745e0-a5d9-4f86-a0ea-0b7c36ccf8f6" />
+
 ```
 
 ### Exemple — Créer un instructeur avec cours
@@ -166,9 +169,6 @@ Controller  →  Service  →  Repository  →  Base de données
    (REST)     (Métier)    (Spring Data)     (PostgreSQL)
 ```
 
----
-
-## 📝 Compte rendu
 
 Le compte rendu du projet est disponible dans ce fichier :
 
