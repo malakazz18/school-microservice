@@ -1,6 +1,7 @@
 package edu.isgb.school.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,7 +26,7 @@ public class Course {
 
 
     private String name;
-
+    @JsonIgnore
     @ManyToMany(mappedBy = "courses", fetch = FetchType.LAZY)
 
     private List<Instructor> instructors = new ArrayList<>();

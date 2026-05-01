@@ -1,5 +1,6 @@
 package edu.isgb.school.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -32,7 +33,7 @@ public class Instructor {
             inverseJoinColumns = @JoinColumn(name = "idCourse")
     )
     private List<Course> courses = new ArrayList<>();
-
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
 
     private School school;
@@ -42,6 +43,9 @@ public class Instructor {
 
     public void addCourse(Course course) {
         courses.add(course);
+        if (course.getInstructors() == null) {
+            course.setInstructors(new ArrayList<>());
+        }
         course.getInstructors().add(this);
     }
 

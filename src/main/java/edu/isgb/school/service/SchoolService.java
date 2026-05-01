@@ -5,6 +5,7 @@ import edu.isgb.school.repositories.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -70,7 +71,8 @@ public class SchoolService {
 
     public Instructor createInstructor(Instructor instructor, List<Course> courses) {
         if (courses != null) {
-            courses.forEach(instructor::addCourse);
+            List<Course> coursesCopy = new ArrayList<>(courses);
+            coursesCopy.forEach(instructor::addCourse);
         }
         return instructorRepository.save(instructor);
     }
