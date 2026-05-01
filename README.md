@@ -159,7 +159,7 @@ Les endpoints ont été testés avec **Postman**.
   ]
 }
 
-
+```
 ## 📐 Architecture en couches
 
 Controller  →  Service  →  Repository  →  Base de données
