@@ -158,12 +158,7 @@ Les endpoints ont été testés avec **Postman**.
     { "name": "Architectures Logicielles" }
   ]
 }
-```
-<img width="1048" height="842" alt="image" src="https://github.com/user-attachments/assets/4651c09c-5782-46ed-9f6e-867318edd71e" />
 
-<img width="1060" height="932" alt="image" src="https://github.com/user-attachments/assets/fc1adf83-e1c6-4cff-a3a6-ff2981e3c76b" />
-
----
 
 ## 📐 Architecture en couches
 
