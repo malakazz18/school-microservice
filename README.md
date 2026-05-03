@@ -142,7 +142,7 @@ Les endpoints ont été testés avec **Postman**.
   }
 }
 
-<img width="1072" height="928" alt="image" src="https://github.com/user-attachments/assets/cbb745e0-a5d9-4f86-a0ea-0b7c36ccf8f6" />
+
 
 ```
 
@@ -158,17 +158,12 @@ Les endpoints ont été testés avec **Postman**.
     { "name": "Architectures Logicielles" }
   ]
 }
+
 ```
-
----
-
 ## 📐 Architecture en couches
 
-```
 Controller  →  Service  →  Repository  →  Base de données
    (REST)     (Métier)    (Spring Data)     (PostgreSQL)
 ```
-
-
-Le compte rendu du projet est disponible dans ce fichier :
-
+```
+Compte Rendu : [COMPTE RENDU Azzouz Malek 2LIG1 & Lahbib Malek 2LIG2.pdf](https://github.com/user-attachments/files/27318802/COMPTE.RENDU.Azzouz.Malek.2LIG1.Lahbib.Malek.2LIG2.pdf)
