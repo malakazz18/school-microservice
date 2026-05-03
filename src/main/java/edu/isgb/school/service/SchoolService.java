@@ -33,13 +33,13 @@ public class SchoolService {
     public School createSchool(School school, List<Student> students,
                                List<Instructor> instructors, List<Department> departments) {
         if (students != null) {
-            students.forEach(school::addStudent);
+            new ArrayList<>(students).forEach(school::addStudent);
         }
         if (instructors != null) {
-            instructors.forEach(school::addInstructor);
+            new ArrayList<>(instructors).forEach(school::addInstructor);
         }
         if (departments != null) {
-            departments.forEach(school::addDepartment);
+            new ArrayList<>(departments).forEach(school::addDepartment);
         }
         return schoolRepository.save(school);
     }
@@ -58,10 +58,11 @@ public class SchoolService {
             School school = getSchoolById(schoolId);
             school.addStudent(student);
             schoolRepository.save(school);
-            return student;
+            return studentRepository.save(student);
         }
         return studentRepository.save(student);
     }
+
 
     @Transactional(readOnly = true)
     public List<Student> getAllStudents() {

@@ -20,7 +20,12 @@ public class TestSchoolController {
 
     @PostMapping("/schools")
     public School createSchool(@RequestBody School school) {
-        return schoolService.createSchool(school, null, null, null);
+        return schoolService.createSchool(
+                school,
+                school.getStudents(),
+                school.getInstructors(),
+                school.getDepartments()
+        );
     }
 
     @GetMapping("/schools/{id}")
