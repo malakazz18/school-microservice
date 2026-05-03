@@ -164,3 +164,6 @@ Les endpoints ont été testés avec **Postman**.
 
 Controller  →  Service  →  Repository  →  Base de données
    (REST)     (Métier)    (Spring Data)     (PostgreSQL)
+```
+```
+Compte Rendu : [COMPTE RENDU Azzouz Malek 2LIG1 & Lahbib Malek 2LIG2.pdf](https://github.com/user-attachments/files/27318802/COMPTE.RENDU.Azzouz.Malek.2LIG1.Lahbib.Malek.2LIG2.pdf)
