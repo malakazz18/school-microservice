@@ -111,59 +111,16 @@ git clone https://github.com/votre-repo/school-microservice.git
 | `GET` | `/api/courses/{id}` | Récupérer un cours par id |
 
 ---
-
-## Tests des endpoints
-
-Les endpoints ont été testés avec **Postman**.
-
-### Exemple — Créer une école
-
-**POST** `http://localhost:8080/api/schools`
-
-```json
-{
-  "name": "ISG Bizerte",
-  "phone": 72123456
-}
-```
-
-### Exemple — Créer un étudiant
-
-**POST** `http://localhost:8080/api/students?schoolId=1`
-
-```json
-{
-  "name": "Ahmed Ben Ali",
-  "birthDate": "2002-05-15",
-  "address": {
-    "street": "Rue de la République",
-    "city": "Bizerte",
-    "postalCode": "7000"
-  }
-}
-
-
-
-```
-
-### Exemple — Créer un instructeur avec cours
-
-**POST** `http://localhost:8080/api/instructors`
-
-```json
-{
-  "name": "Dr. Ben Salah",
-  "courses": [
-    { "name": "Java Avancée" },
-    { "name": "Architectures Logicielles" }
-  ]
-}
-
-```
 ## 📐 Architecture en couches
 
 Controller  →  Service  →  Repository  →  Base de données
    (REST)     (Métier)    (Spring Data)     (PostgreSQL)
 ```
+```
+## Tests des endpoints
+
+Les endpoints ont été testés avec **Postman**.Voir compte rendu.
+```
+
 ```
 Compte Rendu : [COMPTE RENDU Azzouz Malek 2LIG1 & Lahbib Malek 2LIG2.pdf](https://github.com/user-attachments/files/27318802/COMPTE.RENDU.Azzouz.Malek.2LIG1.Lahbib.Malek.2LIG2.pdf)
