@@ -56,9 +56,7 @@ public class SchoolService {
         student.setAddress(address);
         if (schoolId != null) {
             School school = getSchoolById(schoolId);
-            school.addStudent(student);
-            schoolRepository.save(school);
-            return studentRepository.save(student);
+            student.setSchool(school);          
         }
         return studentRepository.save(student);
     }
